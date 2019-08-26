@@ -1,2 +1,0 @@
-# mangoose
-mongoose scraper
