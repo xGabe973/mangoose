@@ -43,7 +43,7 @@ app.set("view engine", "handlebars");
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.connect(MONGODB_URI);
-//mongoose.connect("mongodb://localhost/mongoscraper");
+//mongoose.connect("mongodb://localhost/mongoHeadlines");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -60,6 +60,7 @@ db.once("open", function() {
 // ======
 
 //GET requests to render Handlebars pages
+
 app.get("/", function(req, res) {
   Article.find({"saved": false}, function(error, data) {
     var hbsObject = {
