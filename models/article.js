@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Note = require("./Note");
+var Note = require("./note");
 // Create Schema class
 var Schema = mongoose.Schema;
 
